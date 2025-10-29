@@ -17,6 +17,9 @@ public class Movie
     public string Genre { get; set; } = string.Empty;
 
     [Range(1, 100), DataType(DataType.Currency)]
+
+    [Column(TypeName = "decimal(18, 2)")]
+    public DateTime ReleaseDate { get; set; }
     [Column(TypeName = "decimal(18, 2)")]
     public decimal Price { get; set; }
 
